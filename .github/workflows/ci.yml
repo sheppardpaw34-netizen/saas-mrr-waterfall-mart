@@ -26,5 +26,6 @@ jobs:
 
       - name: Run dbt Compile
         run: |
+          cd saas_analytics
           dbt deps || true
-          dbt compile
+          dbt compile --profiles-dir .
