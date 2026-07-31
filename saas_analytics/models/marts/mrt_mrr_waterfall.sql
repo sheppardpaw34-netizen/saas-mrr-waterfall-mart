@@ -19,9 +19,9 @@ DEPENDENCIES:                           ref('fct_subscription')
 -- CTE 1: Import raw subscription event and apply calendar spine normalization.
 -- -----------------------------------------------------------------------------------------------------------------------
 WITH monthly_spine AS (
-    SELECT CAST ('2026-01-31' AS DATE) AS month_end_date UNION ALL
-    SELECT CAST ('2026-02-28' AS DATE) AS month_end_date UNION ALL
-    SELECT CAST ('2026-03-01' AS DATE) AS month_end_date
+    SELECT CAST ('2026-01-31 23:59:59 UTC' AS TIMESTAMP) AS month_end_date UNION ALL
+    SELECT CAST ('2026-02-28 23:59:59 UTC' AS TIMESTAMP) AS month_end_date UNION ALL
+    SELECT CAST ('2026-03-31 23:59:59 UTC' AS TIMESTAMP) AS month_end_date
     ),
 -- ----------------------------------------------------------------------------------------------------------------------
 -- CTE 2: Calculate active subscriber MRR per month-end snapshot date.

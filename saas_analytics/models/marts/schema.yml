@@ -2,10 +2,7 @@ version: 2
 
 models:
   - name: mrt_mrr_waterfall
-    description: >
-      Executive-level Monthly Recurring Revenue (MRR) waterfall ledger. Reconciles 
-      beginning-of-month MRR to end-of-month MRR across key SaaS movement buckets 
-      (New, Expansion, Contraction, Churn) to audit top-line growth.
+    description: '{{doc("mrt_mrr-waterfall_docs")}}'
     config:
       meta:
         domain: finance
