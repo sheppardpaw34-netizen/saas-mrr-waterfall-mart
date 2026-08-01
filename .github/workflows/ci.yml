@@ -26,5 +26,5 @@ jobs:
       - name: Run dbt Compile & Test
         working-directory: ./saas_analytics
         run: |
-          dbt deps || true
-          dbt compile
+          dbt deps --profiles-dir . || true
+          dbt compile --profiles-dir .
